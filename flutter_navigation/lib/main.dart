@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.yellow,
       ),
-      home: _Homepage(),      
+      home: _Homepage(),
     );
   }
 }
@@ -40,35 +40,39 @@ class __HomepageState extends State<_Homepage> {
       body: Container(
         alignment: Alignment.center,
         child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: <Widget>[
-          Text(
-            "HomeScreen",
-            style: TextStyle(
-              fontSize: 30.0,
-              fontWeight: FontWeight.w600,            
-           ),
-          ),
-          Padding(
-            padding: EdgeInsets.all(10.0),
-            child: RaisedButton(
-              padding: EdgeInsets.symmetric(
-                horizontal: 30.0,
-                vertical: 15.0,
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            Text(
+              "HomeScreen",
+              style: TextStyle(
+                fontSize: 30.0,
+                fontWeight: FontWeight.w600,
               ),
-              color: Colors.red,
-              onPressed: () {},
-              child: Text(
-                "Screen 1",
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 25.0
+            ),
+            Padding(
+              padding: EdgeInsets.all(10.0),
+              child: RaisedButton(
+                padding: EdgeInsets.symmetric(
+                  horizontal: 30.0,
+                  vertical: 15.0,
+                ),
+                color: Colors.red,
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: ((context) => )
+                    ),
+                  );
+                },
+                child: Text(
+                  "Screen 1",
+                  style: TextStyle(color: Colors.white, fontSize: 25.0),
                 ),
               ),
             ),
-          ),
-        ],
-      ),
+          ],
+        ),
       ),
     );
   }
