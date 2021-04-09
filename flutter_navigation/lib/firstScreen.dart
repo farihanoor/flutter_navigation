@@ -45,6 +45,9 @@ class _firstScreenState extends State<firstScreen> {
               ),
               color: Colors.pink[600],
               onPressed: () {
+                Navigator.pop(context);
+              //placing Home Screen on top of first scree
+              /*
                 Navigator.push(
                     context,
                     MaterialPageRoute(
@@ -52,7 +55,8 @@ class _firstScreenState extends State<firstScreen> {
                         (context) => MyApp()
                       ),
                     ),
-                  );
+                );
+              */
               },
               child: Text(
                 "Home Screen",
