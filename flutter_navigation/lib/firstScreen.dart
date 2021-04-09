@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import './main.dart';
+import 'secondScreen.dart';
 
 class firstScreen extends StatefulWidget {
   @override
@@ -67,6 +68,31 @@ class _firstScreenState extends State<firstScreen> {
               ),
             ),
           ),
+          Padding(
+              padding: EdgeInsets.all(10.0),
+              child: RaisedButton(
+                padding: EdgeInsets.symmetric(
+                  horizontal: 30.0,
+                  vertical: 15.0,
+                ),
+                color: Colors.pink[600],
+                onPressed: () {
+                  Navigator.push(
+                    context, 
+                    MaterialPageRoute(
+                      builder: (context) => SecondScreen(),
+                    ),
+                   );
+                },
+                child: Text(
+                  'Second Screen',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 25.0,
+                  ),
+                ),
+              ),
+            ),
         ],
       ),
       ),
