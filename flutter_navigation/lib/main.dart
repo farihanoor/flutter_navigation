@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import './firstScreen.dart';
+
 void main() {
   runApp(MyApp());
 }
@@ -61,7 +63,9 @@ class __HomepageState extends State<_Homepage> {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: ((context) => )
+                      builder: (
+                        (context) => firstScreen()
+                      ),
                     ),
                   );
                 },

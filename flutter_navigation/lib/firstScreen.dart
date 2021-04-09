@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import './main.dart';
+
 class firstScreen extends StatefulWidget {
   @override
   _firstScreenState createState() => _firstScreenState();
@@ -9,8 +11,9 @@ class _firstScreenState extends State<firstScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.red,
+      backgroundColor: Colors.white,
       appBar: AppBar(
+        automaticallyImplyLeading: false,
         title: Text(
           'FirstScreen' 
         ),
@@ -35,7 +38,16 @@ class _firstScreenState extends State<firstScreen> {
                 vertical: 15.0,
               ),
               color: Colors.red,
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (
+                        (context) => MyApp()
+                      ),
+                    ),
+                  );
+              },
               child: Text(
                 "Home Screen",
                 style: TextStyle(
