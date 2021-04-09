@@ -54,7 +54,7 @@ class __HomepageState extends State<_Homepage> {
           //i)Text, ii)Padding
           children: <Widget>[
             Text(
-              "HomeScreen",
+              "Home Screen",
               style: TextStyle(
                 fontSize: 30.0,
                 fontWeight: FontWeight.w600,
@@ -69,7 +69,7 @@ class __HomepageState extends State<_Homepage> {
                   vertical: 15.0,
                 ),
                 //color of the button
-                color: Colors.red,
+                color: Colors.pink[600],
                 //The main code for navigation starts here
                 onPressed: () {
                   Navigator.push(
@@ -84,7 +84,7 @@ class __HomepageState extends State<_Homepage> {
                 },
                 //text displayed on the button
                 child: Text(
-                  "Screen 1",
+                  "First Screen",
                   style: TextStyle(color: Colors.white, fontSize: 25.0),
                 ),
               ),

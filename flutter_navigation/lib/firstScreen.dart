@@ -13,9 +13,15 @@ class _firstScreenState extends State<firstScreen> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
+        //this removes the automatic back button in the AppBar
         automaticallyImplyLeading: false,
+        //text displayed in the AppBar
         title: Text(
-          'FirstScreen' 
+          'First Screen',
+           style: TextStyle(
+            fontSize: 30.0,
+            fontWeight: FontWeight.w600
+           ),
         ),
       ),
       body: Container(
@@ -24,7 +30,7 @@ class _firstScreenState extends State<firstScreen> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           Text(
-            "FirstScreen",
+            "First Screen",
             style: TextStyle(
               fontSize: 30.0,
               fontWeight: FontWeight.w600,            
@@ -37,7 +43,7 @@ class _firstScreenState extends State<firstScreen> {
                 horizontal: 30.0,
                 vertical: 15.0,
               ),
-              color: Colors.red,
+              color: Colors.pink[600],
               onPressed: () {
                 Navigator.push(
                     context,
