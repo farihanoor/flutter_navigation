@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import './firstScreen.dart';
+import './secondScreen.dart';
 
 void main() {
   runApp(MyApp());
@@ -10,6 +11,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      //defining route for first Screen
+      routes: {
+        '/first': (context) => firstScreen(),
+        '/second': (context) => SecondScreen(),
+      },
       //this removes the red label
       debugShowCheckedModeBanner: false,
       title: 'Navigation',
@@ -72,6 +78,9 @@ class __HomepageState extends State<_Homepage> {
                 color: Colors.pink[600],
                 //The main code for navigation starts here
                 onPressed: () {
+                  //calling route
+                  Navigator.pushNamed(context, '/first');
+                  /*
                   Navigator.push(
                     context,
                     MaterialPageRoute(
@@ -80,11 +89,42 @@ class __HomepageState extends State<_Homepage> {
                         (context) => firstScreen()
                       ),
                     ),
-                  );
+                  );*/
                 },
                 //text displayed on the button
                 child: Text(
                   "First Screen",
+                  style: TextStyle(color: Colors.white, fontSize: 25.0),
+                ),
+              ),
+            ),
+            Padding(
+              padding: EdgeInsets.all(10.0),
+              child: RaisedButton(
+                padding: EdgeInsets.symmetric(
+                  horizontal: 30.0,
+                  vertical: 15.0,
+                ),
+                //color of the button
+                color: Colors.pink[600],
+                //The main code for navigation starts here
+                onPressed: () {
+                  //calling route
+                  Navigator.pushNamed(context, '/second');
+                  /*
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (
+                      //we point to the constructor of the firstScreen()
+                        (context) => firstScreen()
+                      ),
+                    ),
+                  );*/
+                },
+                //text displayed on the button
+                child: Text(
+                  "Second Screen",
                   style: TextStyle(color: Colors.white, fontSize: 25.0),
                 ),
               ),
